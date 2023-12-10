@@ -83,11 +83,10 @@ public class DishController {
 
     @GetMapping("/{id}")
     public void get(@PathVariable String id) {
-//        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
-//        queryWrapper.eq(Dish::getId, id);
+        LambdaQueryWrapper<Dish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Dish::getId, id);
         dishService.getById(id);
     }
-
 
 
 }
