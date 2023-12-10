@@ -75,11 +75,11 @@ public class DishController {
         return R.success("菜品新增成功");
     }
 
-//    @DeleteMapping
-//    public R<String> del(String ids) {
-//        dishService.removeById(ids);
-//        return R.success("菜品删除成功");
-//    }
+    @DeleteMapping
+    public R<String> del(String ids) {
+        dishService.removeById(ids);
+        return R.success("菜品删除成功");
+    }
 
     @GetMapping("/{id}")
     public void get(@PathVariable String id) {
